@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BeginActivity"
+    android:background="@drawable/welcome"
+    android:gravity="bottom">
+    <Button
+        android:id="@+id/Begin_login_btn"
+        style="@style/Button_begin"
+        android:text="Login"
+        android:backgroundTint="@color/purple"/>
+    <Button
+        android:id="@+id/Begin_signup_btn"
+        android:layout_below="@+id/Begin_login_btn"
+        style="@style/Button_begin"
+        android:text="Sign Up"
+        android:backgroundTint="@color/gray2"/>
+</RelativeLayout>

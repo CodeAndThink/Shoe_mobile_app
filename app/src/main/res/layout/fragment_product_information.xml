@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProductInformationFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Main_App_Bar">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/product_screen_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways">
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/go_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@drawable/back" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/Start_buy_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:src="@drawable/baseline_add_shopping_cart_24"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/Main_App_Bar">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/Main_App_Bar"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:id="@+id/gender_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:text="Men shoe"
+                    android:textColor="@color/gray"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/Shoe_name_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/gender_label"
+                    android:text="Name of shoe"
+                    android:textSize="25dp" />
+
+                <ImageView
+                    android:id="@+id/Star_label"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/Shoe_name_label"
+                    android:layout_margin="5dp"
+                    android:src="@drawable/star" />
+
+                <TextView
+                    android:id="@+id/Shoe_rate_label"
+                    android:layout_width="40dp"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/Shoe_name_label"
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@id/Star_label"
+                    android:text="5.0"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/Scale_shoe_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:layout_below="@id/Star_label"
+                    android:layout_marginTop="3dp"
+                    android:src="@drawable/dummy_shoe" />
+
+                <TextView
+                    android:id="@+id/Color_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/Scale_shoe_image"
+                    android:text="Select color :"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/Shoe_price_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/Scale_shoe_image"
+                    android:gravity="end"
+                    android:text="$100"
+                    android:textSize="28dp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/Small_shoe_recycle_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@id/Shoe_price_label"
+                    tools:listitem="@layout/small_shoe_colors">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:id="@+id/Shoe_size_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/Small_shoe_recycle_view"
+                    android:text="Size :"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/S_shoe_size"
+                    style="@style/Button_shoe_size"
+                    android:layout_below="@id/Shoe_size_label"
+                    tools:text="S"/>
+                <Button
+                    android:id="@+id/M_shoe_size"
+                    style="@style/Button_shoe_size"
+                    android:layout_below="@id/Shoe_size_label"
+                    android:layout_toRightOf="@id/S_shoe_size"
+                    tools:text="M"/>
+                <Button
+                    android:id="@+id/L_shoe_size"
+                    style="@style/Button_shoe_size"
+                    android:layout_below="@id/Shoe_size_label"
+                    android:layout_toRightOf="@id/M_shoe_size"
+                    tools:text="L"/>
+                <TextView
+                    android:id="@+id/Shoe_description_label"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/S_shoe_size"
+                    android:text="Description :"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/Shoe_description_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/Shoe_description_label"
+                    android:maxLines="30"
+                    android:text="Nike air force 1 is one of the most famous sports shoes of Nike, launched for the first time in 1982. It is the first basketball shoe to use Nike Air technology, bringing innovation to the game and the shoe culture forever. After more than three decades since its launch, Nike air force 1 still retains its classic style, while becoming a fashion icon for many generations.
+
+Nike air force 1 has many different versions, from low-top, mid-top to high-top, for you to choose according to your preferences and style. You can also customize Nike air force 1 according to your wishes with the Nike By You service. Nike air force 1 is not only loved by basketball players, but also by artists, musicians and streetwear icons around the world. Nike air force 1 is an indispensable part of sneaker culture and a testament to the power of community.
+
+If you want to own a pair of Nike air force 1, you can visit the website of Nike or the retail stores near you. You can also see the latest news and updates about Nike air force 1 on the website of Nike UK. Let Nike air force 1 bring you confidence and comfort when moving. Let’s create memorable moments with Nike air force 1."
+                    android:textSize="15dp"
+                    android:layout_marginBottom="50dp"/>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/Buy_area"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_gravity="bottom"
+        android:background="@color/light_gray"
+        android:layout_margin="5dp"
+        android:visibility="gone">
+        <RelativeLayout
+            android:id="@+id/Shoe_order_box"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <TextView
+                android:id="@+id/Shoe_quantity_label"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:text="Quantity :"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_margin="5dp"/>
+            <EditText
+                android:id="@+id/Shoe_quantity"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@id/Quantity_add_btn"
+                android:background="@color/white"
+                android:gravity="center"
+                android:inputType="number"
+                android:textSize="30dp"
+                android:text="0"
+                android:textStyle="bold" />
+            <ImageButton
+                android:id="@+id/Quantity_add_btn"
+                style="@style/Button_shoe_quantity"
+                android:layout_toRightOf="@id/Shoe_quantity_label"
+                android:src="@drawable/baseline_exposure_plus_1_24"/>
+            <ImageButton
+                android:id="@+id/Quantity_minor_btn"
+                style="@style/Button_shoe_quantity"
+                android:src="@drawable/baseline_exposure_neg_1_24"
+                android:layout_toRightOf="@id/Shoe_quantity"/>
+            <Button
+                android:id="@+id/Apply_buy_shoe_btn"
+                style="@style/Button_shoe_order"
+                android:text="Order"/>
+        </RelativeLayout>
+    </androidx.gridlayout.widget.GridLayout>
+</FrameLayout>

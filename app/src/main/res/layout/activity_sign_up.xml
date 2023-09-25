@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity"
+    android:background="@drawable/signup">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical">
+        <EditText
+            android:id="@+id/signup_username"
+            style="@style/Login_edit_text"
+            android:drawableRight="@drawable/baseline_person_24"
+            android:hint="Username"
+            />
+        <EditText
+            style="@style/Login_edit_text"
+            android:id="@+id/signup_password"
+            android:hint="Password"
+            android:layout_below="@id/signup_username"
+            android:drawableRight="@drawable/baseline_key_24"/>
+        <EditText
+            style="@style/Login_edit_text"
+            android:id="@+id/signup_repassword"
+            android:hint="Recheck assword"
+            android:layout_below="@id/signup_password"
+            android:drawableRight="@drawable/baseline_key_24"
+            android:layout_alignParentLeft="true"/>
+
+        <CheckBox
+            android:id="@+id/Agree_with_user_rule"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/signup_repassword"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:buttonTint="@color/white"/>
+        <TextView
+            android:id="@+id/Agree_with_user_rule_label"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="17dp"
+            android:text="I have read the rule"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@id/Agree_with_user_rule"
+            android:layout_below="@id/signup_repassword"/>
+        <Button
+            style="@style/Button_login_signup"
+            android:id="@+id/Signup_btn"
+            android:layout_below="@id/Agree_with_user_rule"
+            android:text="Sign Up"/>
+
+        <TextView
+            android:id="@+id/Text_login_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Signup_btn"
+            android:layout_centerInParent="true"
+            android:text="Already have a account? Go to login"
+            android:textColor="@color/blue"
+            android:textSize="15dp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
